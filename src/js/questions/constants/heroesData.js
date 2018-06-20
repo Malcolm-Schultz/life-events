@@ -2,12 +2,12 @@
 export const HEROES_DATA = [
   {
     id: 'hero_1',
-    text: 'filler1',
+    text: 'Monthly Net-Income',
     defaultValue: '$0'
   },
   {
     id: 'hero_2',
-    text: 'filler2',
+    text: 'Monthly Allowance at Retirement',
     defaultValue: '$0'
   },
   {
