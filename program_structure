@@ -1,0 +1,65 @@
+INFRASTRUCTURE FOR PROGRAM
+
+   Basic Introductory Information
+      Age:
+      Net Worth:
+      Dream Retirement Age:
+      College?
+         Tuition & Fees:
+
+   Who do you identify with the most? (A1)
+      DIY Tax Payer
+      Investor
+      Forgetful Few
+      Frequent Flier
+      Too Busy to Budget
+      Big Spender
+
+   BASED ON INFORMATION GATHERED FROM QUESTION A1, AUTOFILL ESTIMATED VALUES FOR THE FOLLOWING FORM
+
+   Allocation of $$$
+      Investment
+
+         Percent Allocation (Based on elemental risk [gathered from age])
+            STOCKs
+            BONDs
+            ETFs
+
+      Spending Money (Fun Money)
+
+         Possible incorporation of suggesting ways to spend money or save money (coupon system, reminder system, etc)
+
+      Taxes
+
+         Possible incorporation of suggesting ways to make tax paying process more efficient
+
+      Savings
+
+         Possible savings strategies and ideas (suggest to allocate x amount of money [monthly, bimonthly, quarterly, semiannually,
+         annually, etc]
+
+      401k (Retirement)
+         How much are you planning to allocate into this category each month?
+         For how long?
+         Repeat steps until suggested retirement age.
+
+
+____________________________________ (UNDER THIS LINE IS THE ACTUAL STRUCTURE) ____________________________________
+
+
+   Basic Introductory Information
+      Name:
+      Age:
+      Current Income:
+      Net Worth:
+      Dream Retirement Age:
+
+      Who do you identify with the most?
+         DIY Tax Payer
+         Investor
+         Forgetful Few
+         Frequent Flier
+         Too Busy to Budget
+         Big Spender
+
+         ^^^ Answer auto fills "wall of info" with suggested strategies for saving money and budgeting ^^^
