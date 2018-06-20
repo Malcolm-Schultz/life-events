@@ -35,6 +35,15 @@ const initialInfoPage = {
 
     },
     {
+      id: QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT,
+      placeholder: 'Retirement Age',
+      info: 'Retirement Age',
+      type: 'text',
+      required: true,
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT]
+
+    },
+    {
       id: QUESTION_IDS[INITIAL_PAGE].NETWORTH_TEXT,
       placeholder: 'Networth',
       info: 'Initial Net Worth',
@@ -50,12 +59,13 @@ const initialInfoPage = {
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT]
     },
     {
-      id: 'target retirement age',
-      placeholder: 'Retirement age',
+      id: QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT,
+      placeholder: 'Current Location',
       type: 'text',
       required: true,
-      changeEvent: () => console.log('I changed this!')
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT]
     }
+
   ]
 };
 
