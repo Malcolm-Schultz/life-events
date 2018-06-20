@@ -1,4 +1,3 @@
-
 export const HEROES_DATA = [
   {
     id: 'hero_1',
