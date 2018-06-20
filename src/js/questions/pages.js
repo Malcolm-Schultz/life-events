@@ -4,7 +4,7 @@ import { setInputEvents, selectInputClickEvent } from './helpers';
 import changeEvents from './changeEvents';
 
 const {
-  WELCOME_PAGE, INITIAL_PAGE, CAREER_PLANS_PAGE, LIFESTYLE_PLANS_PAGE, RETIREMENT_PLANS_PAGE
+  WELCOME_PAGE, INITIAL_PAGE, CAREER_PLANS_PAGE, LIFESTYLE_PLANS_PAGE, RETIREMENT_PLANS_PAGE, SURVEY_QUESTIONS_PAGE
 } = CONSTANTS.IDs.PAGE_IDS;
 const { QUESTION_IDS } = CONSTANTS.IDs;
 const { OCCUPATIONAL_DATA, EDU_PUBLIC_PRIVATE_DATA, HOUSING_OPTIONS_DATA } = CONSTANTS;
@@ -136,12 +136,47 @@ const retirementPlansPage = {
   ]
 };
 
+const surveyQuestionsPage = {
+  id: SURVEY_QUESTIONS_PAGE,
+  nav: 'Survey',
+  title: 'Here are some questions to help us setup a sample calculation...',
+  show: false,
+  required: true,
+  questions: [
+    {
+      id: 'question1',
+      placeholder: 'Survey Question 1',
+      info: 'question1',
+      type: 'text'
+    },
+    {
+      id: 'question2',
+      placeholder: 'Survey Question 2',
+      info: 'question2',
+      type: 'text'
+    },
+    {
+      id: 'question3',
+      placeholder: 'Survey Question 3',
+      info: 'question3',
+      type: 'text'
+    },
+    {
+      id: 'question4',
+      placeholder: 'Survey Question 4',
+      info: 'question4',
+      type: 'text'
+    }
+  ]
+};
+
 const pages = [
   welcomePage,
   initialInfoPage,
   careerPlansPage,
   lifestylePage,
-  retirementPlansPage
+  retirementPlansPage,
+  surveyQuestionsPage
 ];
 
 export { setInputEvents, selectInputClickEvent };
