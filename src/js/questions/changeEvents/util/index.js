@@ -9,6 +9,7 @@ export const updateHeroes = (financialData) => {
   const netWorthAt65 = dataAt65.totalNetworth;
   console.log('netWorthAt65', netWorthAt65);
   $('#hero_3 h1').html(`$${Math.round(netWorthAt65).toLocaleString()}`);
+  $('#hero_2 h1').html(`$${Math.round(netWorthAt65 / 180).toLocaleString()}`);
 };
 
 export const showError = (id, msg) => {
