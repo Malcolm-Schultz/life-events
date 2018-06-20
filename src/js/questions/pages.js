@@ -149,17 +149,17 @@ const surveyQuestionsPage = {
       info: 'question1',
       type: 'text'
     },
-    {
-      id: 'question2',
-      placeholder: 'Do you travel oustide of your state?',
-      info: 'question2',
-      type: 'text'
+  {
+    id: 'question2',
+    placeholder: 'Do I travel oustide of my state?',
+    info: 'question2',
+    type: 'text'
     },
-    {
-      id: 'question3',
-      placeholder: 'How much money can you afford to lose?',
-      info: 'question3',
-      type: 'text'
+  {
+    id: 'question3',
+    placeholder: 'How much money can I afford to lose?',
+    info: 'question3',
+    type: 'text'
     }
   ]
 };
