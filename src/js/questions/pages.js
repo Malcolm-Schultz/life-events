@@ -145,26 +145,20 @@ const surveyQuestionsPage = {
   questions: [
     {
       id: 'question1',
-      placeholder: 'Survey Question 1',
+      placeholder: 'What am I sacrificing to finance this expense?',
       info: 'question1',
       type: 'text'
     },
     {
       id: 'question2',
-      placeholder: 'Survey Question 2',
+      placeholder: 'Do you travel oustide of your state?',
       info: 'question2',
       type: 'text'
     },
     {
       id: 'question3',
-      placeholder: 'Survey Question 3',
+      placeholder: 'How much money can you afford to lose?',
       info: 'question3',
-      type: 'text'
-    },
-    {
-      id: 'question4',
-      placeholder: 'Survey Question 4',
-      info: 'question4',
       type: 'text'
     }
   ]
