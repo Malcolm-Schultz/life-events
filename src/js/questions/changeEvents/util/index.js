@@ -7,6 +7,8 @@ export const updateHeroes = (financialData) => {
   const dataAt65 = financialData.find(item => item.age === 65);
   console.log('dataAt65', dataAt65);
   const netWorthAt65 = dataAt65.totalNetworth;
+  console.log('netWorthAt65', netWorthAt65);
+  $('#hero_3 h1').html(`$${Math.round(netWorthAt65).toLocaleString()}`);
 };
 
 export const showError = (id, msg) => {
