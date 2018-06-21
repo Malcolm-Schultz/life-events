@@ -102,6 +102,7 @@ const TAX_BRACKETS = {
     }]
   }
 };
+const US_STATES = [""]
 
 export default {
   INDV,
