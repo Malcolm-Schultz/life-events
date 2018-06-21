@@ -18,7 +18,7 @@ export default {
       const infoItems = [
         {
           key: pages[1].questions[0].info,
-          val: parsedValue
+          val: `${parsedValue} years`
         }
       ];
       addOrUpdateInfo(infoItems);
@@ -36,13 +36,13 @@ export default {
       const infoItems = [
         {
           key: pages[1].questions[2].info,
-          val: parsedValue
+          val: `$${parsedValue}`
         }
       ];
       addOrUpdateInfo(infoItems);
+      console.log(infoItems);
 
       const financialData = state.calculateFunds();
-      console.log(financialData);
 
       state.data = { ...state.data, financialData };
       updateHeroes(financialData);
@@ -53,6 +53,14 @@ export default {
   [QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT]: (e) => {
     const parsedValue = parseInt(e.target.value, 10);
     state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+
+    const infoItems = [
+      {
+        key: pages[1].questions[3].info,
+        val: `$${parsedValue}`
+      }
+    ];
+    addOrUpdateInfo(infoItems);
 
     const financialData = state.calculateFunds();
 
@@ -65,10 +73,11 @@ export default {
     const isValid = !Number.isNaN(parsedValue);
 
     if (isValid) {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].NETWORTH_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
       const infoItems = [
         {
-          key: pages[1].questions[1].info,
-          val: e.target.value
+          key: pages[1].questions[4].info,
+          val: `$${parsedValue}`
         }
       ];
       addOrUpdateInfo(infoItems);
@@ -80,6 +89,30 @@ export default {
     } else {
       state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] = undefined;
       showError(QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT, 'Invalid Retirement Age');
+    }
+  },
+  [QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT]: (e) => {
+    const parsedValue = parseInt(e.target.value, 10);
+    state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+    const isValid = !Number.isNaN(parsedValue);
+    if (isValid) {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      const infoItems = [
+        {
+          key: 'Percent Annual Savings',
+          val: `${parsedValue}%`
+        }
+      ];
+      console.log(infoItems);
+      addOrUpdateInfo(infoItems);
+
+      const financialData = state.calculateFunds();
+      state.data = { ...state.data, financialData };
+      updateHeroes(financialData);
+      removeError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT);
+    } else {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      showError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT);
     }
   }
 
