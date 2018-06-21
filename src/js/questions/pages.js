@@ -139,7 +139,7 @@ const retirementPlansPage = {
 const surveyQuestionsPage = {
   id: SURVEY_QUESTIONS_PAGE,
   nav: 'Survey',
-  title: 'Here are some questions to help us setup a sample calculation...',
+  title: 'What are you doing with your money?',
   show: false,
   required: true,
   questions: [
@@ -147,19 +147,22 @@ const surveyQuestionsPage = {
       id: 'question1',
       placeholder: 'What am I sacrificing to finance this expense?',
       info: 'question1',
-      type: 'text'
+      type: 'select-dropdown',
+      required: true
     },
     {
       id: 'question2',
-      placeholder: 'Do you travel oustide of your state?',
+      placeholder: 'Do I travel oustide of my state?',
       info: 'question2',
-      type: 'text'
+      type: 'select-dropdown',
+      required: true
     },
     {
       id: 'question3',
-      placeholder: 'How much money can you afford to lose?',
+      placeholder: 'Can I afford to lose money?',
       info: 'question3',
-      type: 'text'
+      type: 'select-dropdown',
+      required: true
     }
   ]
 };
