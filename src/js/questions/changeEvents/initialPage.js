@@ -35,7 +35,7 @@ export default {
 
       const infoItems = [
         {
-          key: pages[1].questions[1].info,
+          key: pages[1].questions[2].info,
           val: parsedValue
         }
       ];
@@ -51,13 +51,36 @@ export default {
     }
   },
   [QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT]: (e) => {
-    const value = parseInt(e.target.value, 10);
-    state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT] = Number.isNaN(value) ? 0 : value;
+    const parsedValue = parseInt(e.target.value, 10);
+    state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
 
     const financialData = state.calculateFunds();
 
     state.data = { ...state.data, financialData };
     updateHeroes(financialData);
+  },
+  [QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT]: (e) => {
+    const parsedValue = parseInt(e.target.value, 10);
+    state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+    const isValid = !Number.isNaN(parsedValue);
+
+    if (isValid) {
+      const infoItems = [
+        {
+          key: pages[1].questions[1].info,
+          val: e.target.value
+        }
+      ];
+      addOrUpdateInfo(infoItems);
+
+      const financialData = state.calculateFunds();
+      state.data = { ...state.data, financialData };
+      updateHeroes(financialData);
+      removeError(QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT);
+    } else {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] = undefined;
+      showError(QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT, 'Invalid Retirement Age');
+    }
   }
 
 };
