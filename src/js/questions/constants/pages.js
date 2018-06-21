@@ -20,7 +20,8 @@ export const QUESTION_IDS = {
     AGE_TEXT: 'ageInput',
     NETWORTH_TEXT: 'networthInput',
     CURRENT_ANNUAL_INCOME_TEXT: 'currentAnnualIncomeInput',
-    RETIREMENT_AGE_TEXT: 'retirementAgeInput'
+    RETIREMENT_AGE_TEXT: 'retirementAgeInput',
+    ANNUAL_SAVINGS_TEXT: 'annualSavingsInput'
   },
   [CAREER_PLANS_PAGE]: {
     CAREER_DROPDOWN: 'careerInput',

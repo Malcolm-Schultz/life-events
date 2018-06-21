@@ -21,7 +21,9 @@
 					</p>
 					{{/if}} {{#each questions}} {{#compare type "===" "text"}}
 					<div class="md-text-field with-floating-label">
-						<input type="{{type}}" id="{{id}}" style="font-size: 1rem; height: 1rem; width: 24vw;" placeholder="{{placeholder}}"></input>
+						<input type="{{type}}" id="{{id}}" style="width: 24vw;" required></input>
+						<label for="{{id}}">{{placeholder}}</label>
+
 					</div>
 					{{/compare}} {{#compare type "===" "select-dropdown"}}
 					<div class="uitk-select md-text-field with-floating-label" style="margin-top: 4rem; width: 24vw">
