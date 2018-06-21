@@ -35,8 +35,7 @@ export const QUESTION_IDS = {
   [SURVEY_QUESTIONS_PAGE]: {
     QUESTION1_TEXT: 'question1Input',
     QUESTION2_TEXT: 'question2Input',
-    QUESTION3_TEXT: 'question3Input',
-    QUESTION4_TEXT: 'question4Input'
+    QUESTION3_TEXT: 'question3Input'
   }
 };
 

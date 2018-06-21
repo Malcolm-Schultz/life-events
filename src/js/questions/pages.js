@@ -148,21 +148,27 @@ const surveyQuestionsPage = {
       placeholder: 'What am I sacrificing to finance this expense?',
       info: 'question1',
       type: 'select-dropdown',
-      required: true
+      required: true,
+      show: true,
+      label: 'What am I sacrificing to finance this expense?'
     },
     {
       id: 'question2',
       placeholder: 'Do I travel oustide of my state?',
       info: 'question2',
       type: 'select-dropdown',
-      required: true
+      required: true,
+      show: true,
+      label: 'Do I travel outside of my state?'
     },
     {
       id: 'question3',
       placeholder: 'Can I afford to lose money?',
       info: 'question3',
       type: 'select-dropdown',
-      required: true
+      required: true,
+      show: true,
+      label: 'Can I afford to lose money?'
     }
   ]
 };
