@@ -159,7 +159,7 @@ const surveyQuestionsPage = {
     },
     {
       id: 'question3',
-      placeholder: 'How much money can I afford to lose?',
+      placeholder: 'Can I afford to lose money?',
       info: 'question3',
       type: 'select-dropdown',
       required: true
