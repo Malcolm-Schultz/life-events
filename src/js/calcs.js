@@ -47,7 +47,8 @@ const calculateFunds = () => {
       totalNetworth: initialFunds + netIncome
     }];
 
-  const workingYears = R.takeLast(DEFAULT_RETIREMENT_AGE - age, R.times(R.identity, DEFAULT_RETIREMENT_AGE + 1));
+  const retirementAge = state.ui.values.retirementAgeInput;
+  const workingYears = R.takeLast(retirementAge - age, R.times(R.identity, DEFAULT_RETIREMENT_AGE + 1));
 
   money = R.reduce((accum, currentAge) => {
     const year = currentAge - age;
