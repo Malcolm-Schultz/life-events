@@ -73,11 +73,11 @@ export default {
     const isValid = !Number.isNaN(parsedValue);
 
     if (isValid) {
-      state.ui.values[QUESTION_IDS[INITIAL_PAGE].NETWORTH_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
       const infoItems = [
         {
           key: pages[1].questions[4].info,
-          val: `$${parsedValue}`
+          val: `${parsedValue} years`
         }
       ];
       addOrUpdateInfo(infoItems);

@@ -61,7 +61,7 @@ const initialInfoPage = {
     {
       id: QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT,
       placeholder: 'Percent Annual Savings',
-      info: 'Annual Savings',
+      info: 'Retirement Age',
       type: 'text',
       required: true,
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT]
