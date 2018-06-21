@@ -61,7 +61,7 @@ const initialInfoPage = {
     {
       id: QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT,
       placeholder: 'Current Location',
-      type: 'text',
+      type: 'select-dropdown',
       required: true,
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT]
     }
