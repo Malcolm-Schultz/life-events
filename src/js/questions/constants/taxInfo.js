@@ -1285,7 +1285,8 @@ const TAX_BRACKETS = {
           percent: 0.0897
         }]
     },
-    //This is where I stopped
+    // This is where I stopped
+    // https://taxfoundation.org/state-individual-income-tax-rates-brackets-2018/
     NM: {
       [INDV]: [
         {
@@ -1945,11 +1946,11 @@ const TAX_BRACKETS = {
   }
 };
 // Not sure if we'll actually need this array yet, but I'm keeping the base here just in case
-const US_STATES = ['Wisconsin', 'Alabama', 'Kansas'];
+const STATE_CODES = "filler";
 
 export default {
   INDV,
   JOINT,
   TAX_BRACKETS,
-  US_STATES
+  STATE_CODES
 };
