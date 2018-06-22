@@ -1,3 +1,43 @@
+<style type="text/css">
+	.slidecontainer {
+		width: 100%;
+	}
+
+	.slider {
+		-webkit-appearance: none;
+		width: 100%;
+		height: 15px;
+		border-radius: 4px;
+		background: #f0f0f0;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: .2s;
+		transition: opacity .2s;
+	}
+
+	.slider:hover {
+		opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 15px;
+		height: 15px;
+		border-radius: 4px;
+		background: #7fa3bd;
+		cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+		width: 15px;
+		height: 15px;
+		border-radius: 4px;
+		background: #002b49;
+		cursor: pointer;
+	}
+</style>
+
 <div class="small-10 columns">
 	<div id="main_section" class="card" style="height: 70vh; margin-bottom: 2vh; margin-top: 2vh; position: relative">
 		<div class="row" style="height: 11vh;">
@@ -19,11 +59,18 @@
 					<p style="text-align: center; font-size: 2rem; line-height: 2.5rem; color:#002b49; ">
 						{{subtitle2}}
 					</p>
-					{{/if}} {{#each questions}} {{#compare type "===" "text"}}
+					{{/if}} {{#each questions}} {{#compare type "===" "slider"}}
+					<div class="slidecontainer" style="color:#7fa3bd;padding-top:8px;">
+						{{placeholder}}
+						<input type="range" min="0" max="100" value="15" class="slider" id="percAnnIncRange">
+						<p style="text-align:right;">
+							<span id="percAnnInc"></span>%
+						</p>
+					</div>
+					{{/compare}} {{#compare type "===" "text"}}
 					<div class="md-text-field with-floating-label">
 						<input type="{{type}}" id="{{id}}" style="width: 24vw;" required></input>
 						<label for="{{id}}">{{placeholder}}</label>
-
 					</div>
 					{{/compare}} {{#compare type "===" "select-dropdown"}}
 					<div class="uitk-select md-text-field with-floating-label" style="margin-top: 4rem; width: 24vw">
@@ -58,3 +105,14 @@
 				</div>
 			</div>
 		</div>
+
+
+<script>
+	var slider = document.getElementById("percAnnIncRange");
+	var output = document.getElementById("percAnnInc");
+	output.innerHTML = slider.value;
+
+	slider.oninput = function () {
+		output.innerHTML = this.value;
+	}
+</script>

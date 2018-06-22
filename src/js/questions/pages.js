@@ -61,12 +61,12 @@ const initialInfoPage = {
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT]
     },
     {
-      id: QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT,
+      id: QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR,
       placeholder: 'Percent Annual Savings',
-      info: 'Annual Savings',
-      type: 'text',
+      info: 'Percent Annual Savings',
+      type: 'slider',
       required: true,
-      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT]
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR]
     },
     {
       id: QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT,
