@@ -22,6 +22,11 @@ export default {
         }
       ];
       addOrUpdateInfo(infoItems);
+
+      const financialData = state.calculateFunds();
+      state.data = { ...state.data, financialData };
+      updateHeroes(financialData);
+
       removeError(QUESTION_IDS[INITIAL_PAGE].AGE_TEXT);
     } else {
       showError(QUESTION_IDS[INITIAL_PAGE].AGE_TEXT, 'Invalid Age');
