@@ -56,10 +56,11 @@ export default {
 
     const infoItems = [
       {
-        key: pages[1].questions[3].info,
+        key: 'Initial Annual Income',
         val: `$${parsedValue}`
       }
     ];
+    console.log(infoItems);
     addOrUpdateInfo(infoItems);
 
     const financialData = state.calculateFunds();
@@ -91,28 +92,30 @@ export default {
       showError(QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT, 'Invalid Retirement Age');
     }
   },
-  [QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT]: (e) => {
-    const parsedValue = parseInt(e.target.value, 10);
-    state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+  [QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR]: (e) => {
+    const parsedValue = e.target.value;
+    console.log(e);
+    state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+
     const isValid = !Number.isNaN(parsedValue);
     if (isValid) {
-      state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR] = Number.isNaN(parsedValue) ? 0 : parsedValue;
       const infoItems = [
         {
           key: 'Percent Annual Savings',
-          val: `${parsedValue}%`
+          val: `${document.getElementById('percAnnInc')}%`
         }
       ];
-      console.log(infoItems);
+
       addOrUpdateInfo(infoItems);
 
       const financialData = state.calculateFunds();
       state.data = { ...state.data, financialData };
       updateHeroes(financialData);
-      removeError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT);
+      removeError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR);
     } else {
-      state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
-      showError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT);
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      showError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR);
     }
   }
 

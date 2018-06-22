@@ -7,9 +7,12 @@ export const updateHeroes = (financialData) => {
   const dataAt65 = financialData.find(item => item.age === 65);
   console.log('dataAt65', dataAt65);
   const netWorthAt65 = dataAt65.totalNetworth;
+  const percentSavings = state.ui.values.annualSavingsInput || 0;
+  console.log('ANNUAL SAVINGS %', percentSavings);
   console.log('netWorthAt65', netWorthAt65);
   $('#hero_3 h1').html(`$${Math.round(netWorthAt65).toLocaleString()}`);
-  $('#hero_2 h1').html(`$${Math.round(netWorthAt65 / 180).toLocaleString()}`);
+  $('#hero_2 h1').html(`$${Math.round((netWorthAt65 * 0.15) / 180).toLocaleString()}`);
+  $('#hero_1 h1').html(`$${Math.round(netWorthAt65 * 0.15).toLocaleString()}`);
 };
 
 export const showError = (id, msg) => {
