@@ -2010,7 +2010,28 @@ const TAX_BRACKETS = {
   }
 };
 // Not sure if we'll actually need this array yet, but I'm keeping the base here just in case
-const STATE_CODES = 'filler';
+const STATE_CODES = [
+  {
+    id: 'AL',
+    text: 'Alabama'
+  },
+  {
+    id: 'AK',
+    text: 'Alaska'
+  },
+  {
+    id: 'AZ',
+    text: 'Arizona'
+  },
+  {
+    id: 'AR',
+    text: 'Arkansas'
+  },
+  {
+    id: 'CA',
+    text: 'California'
+  }
+];
 
 export default {
   INDV,

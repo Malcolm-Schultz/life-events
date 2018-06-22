@@ -99,7 +99,6 @@ const getFederalTaxBracket = (indvOrJoint, taxibleEarnings) => {
     return accum;
   }, taxData[0])(taxData);
 };
-console.log(getFederalTaxBracket());
 
 const getStateTaxBracket = (indvOrJoint, stateCode = 'WI', taxibleIncome) => {
   const taxData = indvOrJoint === TAX_BRACKETS.JOINT ? TAX_BRACKETS.STATE[stateCode].JOINT : TAX_BRACKETS.STATE[stateCode].INDV;
