@@ -77,7 +77,7 @@ export default {
       state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
       const infoItems = [
         {
-          key: pages[1].questions[4].info,
+          key: `Retirement Age`,
           val: `${parsedValue} years`
         }
       ];
