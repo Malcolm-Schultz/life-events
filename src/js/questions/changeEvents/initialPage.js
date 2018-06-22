@@ -45,8 +45,6 @@ export default {
         }
       ];
       addOrUpdateInfo(infoItems);
-      console.log(infoItems);
-
       const financialData = state.calculateFunds();
 
       state.data = { ...state.data, financialData };
@@ -65,7 +63,6 @@ export default {
         val: `$${parsedValue}`
       }
     ];
-    console.log(infoItems);
     addOrUpdateInfo(infoItems);
 
     const financialData = state.calculateFunds();
@@ -75,7 +72,6 @@ export default {
   },
   [QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT]: (e) => {
     const parsedValue = parseInt(e.target.value, 10);
-    state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
     const isValid = !Number.isNaN(parsedValue);
 
     if (isValid) {
@@ -99,8 +95,6 @@ export default {
   },
   [QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR]: (e) => {
     const parsedValue = e.target.value;
-    console.log(e);
-    state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR] = Number.isNaN(parsedValue) ? 0 : parsedValue;
 
     const isValid = !Number.isNaN(parsedValue);
     if (isValid) {
@@ -108,7 +102,7 @@ export default {
       const infoItems = [
         {
           key: 'Percent Annual Savings',
-          val: `${document.getElementById('percAnnInc')}%`
+          val: `${parsedValue}%`
         }
       ];
 

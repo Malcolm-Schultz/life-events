@@ -1,18 +1,23 @@
 import $ from 'jquery';
 import { navigateForward, navigateBackward, navigateToAPage } from '../../../navigation';
+import CONSTANTS from '../../constants';
+
+const { QUESTION_IDS, PAGE_IDS } = CONSTANTS.IDs;
+const { INITIAL_PAGE } = PAGE_IDS;
 
 export const updateHeroes = (financialData) => {
-  console.log('Hello!');
-  console.log('financialData', financialData);
   const dataAt65 = financialData.find(item => item.age === 65);
-  console.log('dataAt65', dataAt65);
   const netWorthAt65 = dataAt65.totalNetworth;
   const percentSavings = state.ui.values.annualSavingsInput || 0;
-  console.log('ANNUAL SAVINGS %', percentSavings);
-  console.log('netWorthAt65', netWorthAt65);
+  const age = state.ui.values[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT];
+  const rAge = state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT];
+
+  const retirementMoney = (netWorthAt65 * (percentSavings / 100));
+  const monthlyRetirementMoney = (retirementMoney / (rAge - age));
+
   $('#hero_3 h1').html(`$${Math.round(netWorthAt65).toLocaleString()}`);
-  $('#hero_2 h1').html(`$${Math.round((netWorthAt65 * 0.15) / 180).toLocaleString()}`);
-  $('#hero_1 h1').html(`$${Math.round(netWorthAt65 * 0.15).toLocaleString()}`);
+  $('#hero_2 h1').html(`$${Math.round(monthlyRetirementMoney).toLocaleString()}`);
+  $('#hero_1 h1').html(`$${Math.round(retirementMoney).toLocaleString()}`);
 };
 
 export const showError = (id, msg) => {
