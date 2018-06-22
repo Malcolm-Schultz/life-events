@@ -1946,7 +1946,7 @@ const TAX_BRACKETS = {
   }
 };
 // Not sure if we'll actually need this array yet, but I'm keeping the base here just in case
-const STATE_CODES = "filler";
+const STATE_CODES = 'filler';
 
 export default {
   INDV,
