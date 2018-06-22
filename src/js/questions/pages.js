@@ -30,7 +30,7 @@ const initialInfoPage = {
     {
       id: QUESTION_IDS[INITIAL_PAGE].AGE_TEXT,
       placeholder: 'Age',
-      info: 'Starting age',
+      info: 'Starting Age',
       type: 'text',
       required: true,
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT]
@@ -61,9 +61,17 @@ const initialInfoPage = {
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT]
     },
     {
+      id: QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT,
+      placeholder: 'Percent Annual Savings',
+      info: 'Annual Savings',
+      type: 'text',
+      required: true,
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_TEXT]
+    },
+    {
       id: QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT,
       placeholder: 'Current Location',
-      type: 'text',
+      type: 'select-dropdown',
       required: true,
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT]
     }
