@@ -4,7 +4,7 @@ import { setInputEvents, selectInputClickEvent } from './helpers';
 import changeEvents from './changeEvents';
 
 const {
-  WELCOME_PAGE, INITIAL_PAGE, CAREER_PLANS_PAGE, LIFESTYLE_PLANS_PAGE, RETIREMENT_PLANS_PAGE, SURVEY_QUESTIONS_PAGE
+  WELCOME_PAGE, INITIAL_PAGE, SURVEY_QUESTIONS_PAGE, CAREER_PLANS_PAGE, LIFESTYLE_PLANS_PAGE, RETIREMENT_PLANS_PAGE
 } = CONSTANTS.IDs.PAGE_IDS;
 const { QUESTION_IDS } = CONSTANTS.IDs;
 const {
@@ -68,6 +68,49 @@ const initialInfoPage = {
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT]
     }
 
+  ]
+};
+
+const surveyQuestionsPage = {
+  id: SURVEY_QUESTIONS_PAGE,
+  nav: 'Survey',
+  title: 'What are you doing with your money?',
+  show: false,
+  required: true,
+  questions: [
+    {
+      id: 'question1',
+      placeholder: 'What am I sacrificing to finance this expense?',
+      info: 'question1',
+      type: 'select-dropdown',
+      required: true,
+      show: true,
+      label: 'What am I sacrificing to finance this expense?',
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].WHAT_AM_I_SACRIFICING_TO_FINANCE_THIS_EXPENSE_DROPDOWN],
+      values: QUESTION_1_DATA
+    },
+    {
+      id: 'question2',
+      placeholder: 'Do I travel oustide of my state?',
+      info: 'question2',
+      type: 'select-dropdown',
+      required: true,
+      show: true,
+      label: 'Do I travel outside of my state?',
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].DO_I_TRAVEL_OUTSIDE_OF_MY_STATE_DROPDOWN],
+      values: QUESTION_2_DATA
+    },
+    {
+      id: 'question3',
+      placeholder: 'Can I afford to lose money?',
+      info: 'question3',
+      type: 'select-dropdown',
+      required: true,
+      show: true,
+      label: 'Can I afford to lose money?',
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN],
+      values: QUESTION_3_DATA
+    }
   ]
 };
 
@@ -138,56 +181,13 @@ const retirementPlansPage = {
   ]
 };
 
-const surveyQuestionsPage = {
-  id: SURVEY_QUESTIONS_PAGE,
-  nav: 'Survey',
-  title: 'What are you doing with your money?',
-  show: false,
-  required: true,
-  questions: [
-    {
-      id: 'question1',
-      placeholder: 'What am I sacrificing to finance this expense?',
-      info: 'question1',
-      type: 'select-dropdown',
-      required: true,
-      show: true,
-      label: 'What am I sacrificing to finance this expense?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].WHAT_AM_I_SACRIFICING_TO_FINANCE_THIS_EXPENSE_DROPDOWN],
-      values: QUESTION_1_DATA
-    },
-    {
-      id: 'question2',
-      placeholder: 'Do I travel oustide of my state?',
-      info: 'question2',
-      type: 'select-dropdown',
-      required: true,
-      show: true,
-      label: 'Do I travel outside of my state?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].DO_I_TRAVEL_OUTSIDE_OF_MY_STATE_DROPDOWN],
-      values: QUESTION_2_DATA
-    },
-    {
-      id: 'question3',
-      placeholder: 'Can I afford to lose money?',
-      info: 'question3',
-      type: 'select-dropdown',
-      required: true,
-      show: true,
-      label: 'Can I afford to lose money?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN],
-      values: QUESTION_3_DATA
-    }
-  ]
-};
-
 const pages = [
   welcomePage,
   initialInfoPage,
+  surveyQuestionsPage,
   careerPlansPage,
   lifestylePage,
-  retirementPlansPage,
-  surveyQuestionsPage
+  retirementPlansPage
 ];
 
 export { setInputEvents, selectInputClickEvent };
