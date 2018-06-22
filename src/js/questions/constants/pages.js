@@ -1,9 +1,9 @@
 export const INITIAL_PAGE = 'initialPage';
+export const SURVEY_QUESTIONS_PAGE = 'surveyQuestionsPage';
 export const CAREER_PLANS_PAGE = 'careerPlansPage';
 export const LIFESTYLE_PLANS_PAGE = 'lifestylePlansPage';
 export const RETIREMENT_PLANS_PAGE = 'retirementPlansPage';
 export const WELCOME_PAGE = 'welcomePage';
-export const SURVEY_QUESTIONS_PAGE = 'surveyQuestionsPage';
 
 export const PAGE_IDS = {
   WELCOME_PAGE,
@@ -23,6 +23,11 @@ export const QUESTION_IDS = {
     RETIREMENT_AGE_TEXT: 'retirementAgeInput',
     ANNUAL_SAVINGS_BAR: 'annualSavingsInput'
   },
+  [SURVEY_QUESTIONS_PAGE]: {
+    QUESTION1_TEXT: 'question1Input',
+    QUESTION2_TEXT: 'question2Input',
+    QUESTION3_TEXT: 'question3Input'
+  },
   [CAREER_PLANS_PAGE]: {
     CAREER_DROPDOWN: 'careerInput',
     EDUCATION_PUBLIC_PRIVATE_RADIO: 'eduPublicPrivateInput'
@@ -32,12 +37,6 @@ export const QUESTION_IDS = {
   },
   [RETIREMENT_PLANS_PAGE]: {
     FOUR01K_TEXT: '401KInput'
-  },
-  [SURVEY_QUESTIONS_PAGE]: {
-    QUESTION1_TEXT: 'question1Input',
-    QUESTION2_TEXT: 'question2Input',
-    QUESTION3_TEXT: 'question3Input',
-    QUESTION4_TEXT: 'question4Input'
   }
 };
 

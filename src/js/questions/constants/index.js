@@ -4,6 +4,9 @@ import EDUCATIONAL_DATA, { EDU_PUBLIC_PRIVATE_DATA, EDUCATION_LEVELS } from './e
 import { HOUSING_OPTIONS_DATA } from './lifestyleData';
 import TAX_INFO from './taxInfo';
 import { HEROES_DATA } from './heroesData';
+import QUESTION_1_DATA from './question1';
+import QUESTION_2_DATA from './question2';
+import QUESTION_3_DATA from './question3';
 
 const DEFAULT_AGE = 18;
 const DEFAULT_COLLEGE_START_AGE = 18;
@@ -24,5 +27,8 @@ export default {
   DEFAULT_DEATH_AGE,
   DEFAULT_COLA_ADJ,
   TAX_INFO,
+  QUESTION_1_DATA,
+  QUESTION_2_DATA,
+  QUESTION_3_DATA,
   HEROES_DATA
 };
