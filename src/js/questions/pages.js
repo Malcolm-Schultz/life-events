@@ -15,8 +15,8 @@ const welcomePage = {
   id: WELCOME_PAGE,
   nav: 'Welcome',
   title: 'Welcome',
-  subtitle: 'The Life Events Financial Calculator will help you see how the big decisions that you make throughout your life will effect your financial well-being.',
-  subtitle2: 'Click the arrow when you\'re ready!',
+  subtitle: 'How do you envision your life 10 years from now?',
+  subtitle2: 'The Life Events Financial Calculator will help you see how the big decisions that you make throughout your life will effect your financial well-being.',
   show: true
 };
 
@@ -82,40 +82,40 @@ const initialInfoPage = {
 const surveyQuestionsPage = {
   id: SURVEY_QUESTIONS_PAGE,
   nav: 'Survey',
-  title: 'What are you doing with your money?',
+  title: 'Are you ready to retire?',
   show: false,
   required: true,
   questions: [
     {
       id: 'question1',
-      placeholder: 'What am I sacrificing to finance this expense?',
+      placeholder: '',
       info: 'question1',
       type: 'select-dropdown',
       required: true,
       show: true,
-      label: 'What am I sacrificing to finance this expense?',
+      label: 'To support your lifestyle in retirement, you\'ll need 100% of your preretirement income.',
       changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].WHAT_AM_I_SACRIFICING_TO_FINANCE_THIS_EXPENSE_DROPDOWN],
       values: QUESTION_1_DATA
     },
     {
       id: 'question2',
-      placeholder: 'Do I travel oustide of my state?',
+      placeholder: '',
       info: 'question2',
       type: 'select-dropdown',
       required: true,
       show: true,
-      label: 'Do I travel outside of my state?',
+      label: 'If you\'re short on savings, you should work longer.',
       changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].DO_I_TRAVEL_OUTSIDE_OF_MY_STATE_DROPDOWN],
       values: QUESTION_2_DATA
     },
     {
       id: 'question3',
-      placeholder: 'Can I afford to lose money?',
+      placeholder: '',
       info: 'question3',
       type: 'select-dropdown',
       required: true,
       show: true,
-      label: 'Can I afford to lose money?',
+      label: 'Stocks are great investments when you\'re young, but they are way too risky for retirees to own.',
       changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN],
       values: QUESTION_3_DATA
     }
@@ -125,7 +125,7 @@ const surveyQuestionsPage = {
 const careerPlansPage = {
   id: CAREER_PLANS_PAGE,
   nav: 'Career',
-  title: 'What are your aspirations...',
+  title: 'What are your aspirations?',
   show: false,
   questions: [
     {
@@ -156,7 +156,7 @@ const careerPlansPage = {
 const lifestylePage = {
   id: 'lifestylePage',
   nav: 'Lifestyle',
-  title: 'How do you want to live...',
+  title: 'How do you want to live?',
   show: false,
   required: true,
   questions: [
@@ -176,7 +176,7 @@ const lifestylePage = {
 const retirementPlansPage = {
   id: RETIREMENT_PLANS_PAGE,
   nav: 'Retirement',
-  title: 'What are your retirement plans...',
+  title: 'What are your retirement plans?',
   show: false,
   required: true,
   questions: [
