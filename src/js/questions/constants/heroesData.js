@@ -11,7 +11,7 @@ export const HEROES_DATA = [
   },
   {
     id: 'hero_3',
-    text: 'Current Monthly Spending Money',
+    text: 'Current Monthly Disposable Income',
     defaultValue: '$0'
   }
 ];

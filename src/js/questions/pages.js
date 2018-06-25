@@ -4,11 +4,11 @@ import { setInputEvents, selectInputClickEvent } from './helpers';
 import changeEvents from './changeEvents';
 
 const {
-  WELCOME_PAGE, INITIAL_PAGE, SURVEY_QUESTIONS_PAGE, CAREER_PLANS_PAGE, LIFESTYLE_PLANS_PAGE, RETIREMENT_PLANS_PAGE
+  WELCOME_PAGE, INITIAL_PAGE, SURVEY_QUESTIONS_PAGE
 } = CONSTANTS.IDs.PAGE_IDS;
 const { QUESTION_IDS } = CONSTANTS.IDs;
 const {
-  OCCUPATIONAL_DATA, EDU_PUBLIC_PRIVATE_DATA, HOUSING_OPTIONS_DATA, QUESTION_1_DATA, QUESTION_2_DATA, QUESTION_3_DATA
+  QUESTION_1_DATA, QUESTION_2_DATA, QUESTION_3_DATA
 } = CONSTANTS;
 const { STATE_CODES } = CONSTANTS.TAX_INFO;
 
@@ -16,8 +16,8 @@ const welcomePage = {
   id: WELCOME_PAGE,
   nav: 'Welcome',
   title: 'Welcome',
-  subtitle: 'The Life Events Financial Calculator will help you see how the big decisions that you make throughout your life will effect your financial well-being.',
-  subtitle2: 'Lets get started!',
+  subtitle: 'Where do you see yourself in 30 years?',
+  subtitle2: 'The Retirement Age Financial Calculator will allow you to see how your financial decisions now will affect your retirement and future funds.',
   show: true
 };
 
@@ -109,103 +109,33 @@ const surveyQuestionsPage = {
   questions: [
     {
       id: 'question1',
-      placeholder: 'What am I sacrificing to finance this expense?',
+      placeholder: 'How much do you spend per month on food?',
       info: 'question1',
-      type: 'select-dropdown',
+      type: 'text',
       required: true,
       show: true,
-      label: 'What am I sacrificing to finance this expense?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].WHAT_AM_I_SACRIFICING_TO_FINANCE_THIS_EXPENSE_DROPDOWN],
-      values: QUESTION_1_DATA
+      label: 'How much do you spend per month on food?',
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_FOOD_SPENDING],
     },
     {
       id: 'question2',
-      placeholder: 'Do I travel oustide of my state?',
+      placeholder: 'How much is your monthly rent/mortgage?',
       info: 'question2',
-      type: 'select-dropdown',
+      type: 'text',
       required: true,
       show: true,
-      label: 'Do I travel outside of my state?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].DO_I_TRAVEL_OUTSIDE_OF_MY_STATE_DROPDOWN],
-      values: QUESTION_2_DATA
+      label: 'How much is your monthly rent/mortgage?',
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_RENT_MORTGAGE],
     },
     {
       id: 'question3',
-      placeholder: 'Can I afford to lose money?',
+      placeholder: 'Monthly recreational spending?',
       info: 'question3',
-      type: 'select-dropdown',
+      type: 'text',
       required: true,
       show: true,
-      label: 'Can I afford to lose money?',
+      label: 'Monthly recreational spending',
       changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN],
-      values: QUESTION_3_DATA
-    }
-  ]
-};
-
-const careerPlansPage = {
-  id: CAREER_PLANS_PAGE,
-  nav: 'Career',
-  title: 'What are your aspirations...',
-  show: false,
-  questions: [
-    {
-      id: QUESTION_IDS[CAREER_PLANS_PAGE].CAREER_DROPDOWN,
-      label: 'Career',
-      show: true,
-      placeholder: 'Choose a Career...',
-      info: 'Career',
-      type: 'select-dropdown',
-      required: true,
-      changeEvent: changeEvents[QUESTION_IDS[CAREER_PLANS_PAGE].CAREER_DROPDOWN],
-      values: OCCUPATIONAL_DATA
-    },
-    {
-      id: QUESTION_IDS[CAREER_PLANS_PAGE].EDUCATION_PUBLIC_PRIVATE_RADIO,
-      label: 'Education',
-      show: false,
-      placeholder: 'Choose a type of school...',
-      info: 'Public or Private',
-      type: 'radio',
-      required: false,
-      changeEvent: changeEvents[QUESTION_IDS[CAREER_PLANS_PAGE].EDUCATION_PUBLIC_PRIVATE_RADIO],
-      values: EDU_PUBLIC_PRIVATE_DATA
-    }
-  ]
-};
-
-const lifestylePage = {
-  id: 'lifestylePage',
-  nav: 'Lifestyle',
-  title: 'How do you want to live...',
-  show: false,
-  required: true,
-  questions: [
-    {
-      id: QUESTION_IDS[LIFESTYLE_PLANS_PAGE].MORTGAGE_RENT_RADIO,
-      label: 'Mortgage / Rent',
-      show: true,
-      placeholder: 'Choose a type housing...',
-      info: 'Housing',
-      type: 'radio',
-      changeEvent: changeEvents[QUESTION_IDS[LIFESTYLE_PLANS_PAGE].MORTGAGE_RENT_RADIO],
-      values: HOUSING_OPTIONS_DATA
-    }
-  ]
-};
-
-const retirementPlansPage = {
-  id: RETIREMENT_PLANS_PAGE,
-  nav: 'Retirement',
-  title: 'What are your retirement plans...',
-  show: false,
-  required: true,
-  questions: [
-    {
-      id: '401KInput',
-      placeholder: '401K / Month',
-      info: '401K',
-      type: 'text'
     }
   ]
 };
@@ -213,10 +143,7 @@ const retirementPlansPage = {
 const pages = [
   welcomePage,
   initialInfoPage,
-  surveyQuestionsPage,
-  careerPlansPage,
-  lifestylePage,
-  retirementPlansPage
+  surveyQuestionsPage
 ];
 
 export { setInputEvents, selectInputClickEvent };
