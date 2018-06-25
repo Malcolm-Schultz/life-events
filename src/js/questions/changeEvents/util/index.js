@@ -12,12 +12,23 @@ export const updateHeroes = (financialData) => {
   const age = state.ui.values[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT];
   const rAge = state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT];
 
+  console.log(age, rAge);
+
   const retirementMoney = (netWorthAt65 * (percentSavings / 100));
-  const monthlyRetirementMoney = (retirementMoney / (rAge - age));
+  const monthlyRetirementMoney = ((retirementMoney / 12) / (80 - rAge));
 
   $('#hero_3 h1').html(`$${Math.round(netWorthAt65).toLocaleString()}`);
   $('#hero_2 h1').html(`$${Math.round(monthlyRetirementMoney).toLocaleString()}`);
   $('#hero_1 h1').html(`$${Math.round(retirementMoney).toLocaleString()}`);
+
+  const hero1ColorVal = 0;
+  document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(${hero1ColorVal}, 70%, 50%, 1)`;
+
+  const hero2ColorVal = 0;
+  document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(${hero2ColorVal}, 70%, 50%, 1)`;
+
+  const hero3ColorVal = 0;
+  document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(${hero3ColorVal}, 70%, 50%, 1)`;
 };
 
 export const showError = (id, msg) => {
