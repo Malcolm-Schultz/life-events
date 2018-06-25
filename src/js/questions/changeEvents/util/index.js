@@ -9,26 +9,37 @@ export const updateHeroes = (financialData) => {
   const dataAt65 = financialData.find(item => item.age === 65);
   const netWorthAt65 = dataAt65.totalNetworth;
   const percentSavings = state.ui.values.annualSavingsInput || 0;
-  const age = state.ui.values[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT];
-  const rAge = state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT];
-
-  console.log(age, rAge);
+  const rAge = state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] || 0;
+  // const age = state.ui.values[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT] || 0;
+  const startingIncome = state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT] || 0;
 
   const retirementMoney = (netWorthAt65 * (percentSavings / 100));
   const monthlyRetirementMoney = ((retirementMoney / 12) / (80 - rAge));
 
-  $('#hero_3 h1').html(`$${Math.round(netWorthAt65).toLocaleString()}`);
-  $('#hero_2 h1').html(`$${Math.round(monthlyRetirementMoney).toLocaleString()}`);
+  // const avgYearlyIncome = netWorthAt65 / (rAge - age);
+  const percentNotSaved = (100 - percentSavings) / 100;
+  const monthlyNonRetirementMoney = (startingIncome * percentNotSaved) / 12;
+
   $('#hero_1 h1').html(`$${Math.round(retirementMoney).toLocaleString()}`);
+  $('#hero_2 h1').html(`$${Math.round(monthlyRetirementMoney).toLocaleString()}`);
+  $('#hero_3 h1').html(`$${Math.round(monthlyNonRetirementMoney).toLocaleString()}`);
 
-  const hero1ColorVal = 0;
-  document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(${hero1ColorVal}, 70%, 50%, 1)`;
+  const hero2ColorVal = Math.round((monthlyRetirementMoney / 4000) * 120);
+  if (hero2ColorVal > 120) {
+    document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;
+    document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;
+  } else {
+    document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(${hero2ColorVal - 20}, 70%, 50%, 1)`;
+    document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(${hero2ColorVal - 20}, 70%, 50%, 1)`;
+  }
 
-  const hero2ColorVal = 0;
-  document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(${hero2ColorVal}, 70%, 50%, 1)`;
+  const hero3ColorVal = Math.round((monthlyNonRetirementMoney / 4000) * 120);
 
-  const hero3ColorVal = 0;
-  document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(${hero3ColorVal}, 70%, 50%, 1)`;
+  if (hero3ColorVal > 120) {
+    document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;
+  } else {
+    document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(${hero3ColorVal - 20}, 70%, 50%, 1)`;
+  }
 };
 
 export const showError = (id, msg) => {

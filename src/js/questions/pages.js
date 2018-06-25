@@ -79,7 +79,23 @@ const initialInfoPage = {
       label: 'Current location',
       changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN],
       values: STATE_CODES
-    }
+    }/*,
+    {
+      id: QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT,
+      placeholder: 'Monthly Retirement Money Goal',
+      info: 'Monthly Retirement Money Goal',
+      type: 'text',
+      required: true,
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT]
+    },
+    {
+      id: QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT,
+      placeholder: 'Monthly Money Goal',
+      info: 'Monthly Money Goal',
+      type: 'text',
+      required: true,
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT]
+    } */
 
   ]
 };

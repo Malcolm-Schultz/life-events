@@ -118,4 +118,56 @@ export default {
     }
   }
 
+  /* [QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT]: (e) => {
+    const parsedValue = e.target.value;
+    const isValid = !Number.isNaN(parsedValue);
+
+    if (isValid) {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+
+      const infoItems = [
+        {
+          key: 'Monthly Retirement Allowance Goal',
+          val: `$${parsedValue}`
+        }
+      ];
+
+      addOrUpdateInfo(infoItems);
+
+      const financialData = state.calculateFunds();
+      state.data = { ...state.data, financialData };
+      updateHeroes(financialData);
+      removeError([QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT]);
+    } else {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      showError([QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT]);
+    }
+  },
+
+  [QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT]: (e) => {
+    const parsedValue = e.target.value;
+    const isValid = !Number.isNaN(parsedValue);
+
+    if (isValid) {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+
+      const infoItems = [
+        {
+          key: 'Monthly Money Goal',
+          val: `$${parsedValue}`
+        }
+      ];
+
+      addOrUpdateInfo(infoItems);
+
+      const financialData = state.calculateFunds();
+      state.data = { ...state.data, financialData };
+      updateHeroes(financialData);
+      removeError([QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT]);
+    } else {
+      state.ui.values[QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT] = Number.isNaN(parsedValue) ? 0 : parsedValue;
+      showError([QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_MONEY_TEXT]);
+    }
+  } */
+
 };
