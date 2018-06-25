@@ -28,6 +28,9 @@ export const updateHeroes = (financialData) => {
   if (hero2ColorVal > 120) {
     document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;
     document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;
+  } else if (hero2ColorVal < 20) {
+    document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(0, 70%, 50%, 1)`;
+    document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(0, 70%, 50%, 1)`;
   } else {
     document.querySelector(`#hero_${2}`).style.backgroundColor = `hsla(${hero2ColorVal - 20}, 70%, 50%, 1)`;
     document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(${hero2ColorVal - 20}, 70%, 50%, 1)`;
@@ -37,6 +40,8 @@ export const updateHeroes = (financialData) => {
 
   if (hero3ColorVal > 120) {
     document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;
+  } else if (hero3ColorVal < 20) {
+    document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(0, 70%, 50%, 1)`;
   } else {
     document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(${hero3ColorVal - 20}, 70%, 50%, 1)`;
   }
