@@ -48,7 +48,7 @@ const initialInfoPage = {
     },
     {
       id: QUESTION_IDS[INITIAL_PAGE].NETWORTH_TEXT,
-      placeholder: 'Networth',
+      placeholder: 'Net Worth',
       info: 'Initial Net Worth',
       type: 'text',
       required: true,
