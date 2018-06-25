@@ -8,7 +8,7 @@ import QUESTION_1_DATA from './question1';
 import QUESTION_2_DATA from './question2';
 import QUESTION_3_DATA from './question3';
 
-const DEFAULT_AGE = 18;
+const DEFAULT_AGE = 0;
 const DEFAULT_COLLEGE_START_AGE = 18;
 const DEFAULT_RETIREMENT_AGE = 65;
 const DEFAULT_DEATH_AGE = 80;

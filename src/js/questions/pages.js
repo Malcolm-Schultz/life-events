@@ -16,7 +16,7 @@ const welcomePage = {
   nav: 'Welcome',
   title: 'Welcome',
   subtitle: 'The Life Events Financial Calculator will help you see how the big decisions that you make throughout your life will effect your financial well-being.',
-  subtitle2: 'Lets get started!',
+  subtitle2: 'Click the arrow when you\'re ready!',
   show: true
 };
 
