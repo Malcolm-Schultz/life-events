@@ -10,6 +10,7 @@ const { QUESTION_IDS } = CONSTANTS.IDs;
 const {
   OCCUPATIONAL_DATA, EDU_PUBLIC_PRIVATE_DATA, HOUSING_OPTIONS_DATA, QUESTION_1_DATA, QUESTION_2_DATA, QUESTION_3_DATA
 } = CONSTANTS;
+const { STATE_CODES } = CONSTANTS.TAX_INFO;
 
 const welcomePage = {
   id: WELCOME_PAGE,
@@ -64,16 +65,20 @@ const initialInfoPage = {
       id: QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR,
       placeholder: 'Percent Annual Savings',
       info: 'Percent Annual Savings',
+      text: '15',
       type: 'slider',
       required: true,
-      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR]
+      clickEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR]
     },
     {
-      id: QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT,
+      id: QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN,
       placeholder: 'Current Location',
       type: 'select-dropdown',
       required: true,
-      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_TEXT]
+      show: true,
+      label: 'Current location',
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN],
+      values: STATE_CODES
     }
 
   ]

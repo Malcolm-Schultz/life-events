@@ -62,9 +62,9 @@
 					{{/if}} {{#each questions}} {{#compare type "===" "slider"}}
 					<div class="slidecontainer" style="color:#7fa3bd;padding-top:8px;">
 						{{placeholder}}
-						<input type="range" min="0" max="100" value="15" class="slider" id="percAnnIncRange">
-						<p style="text-align:right;">
-							<span id="percAnnInc"></span>%
+						<input type="range" min="0" max="100" value="15" class="slider" id="{{id}}">
+						<p style="text-align:right;" id="retirementMoneySlider">
+							<span id="{{id}}"></span>%
 						</p>
 					</div>
 					{{/compare}} {{#compare type "===" "text"}}
@@ -105,14 +105,3 @@
 				</div>
 			</div>
 		</div>
-
-
-<script>
-	var slider = document.getElementById("percAnnIncRange");
-	var output = document.getElementById("percAnnInc");
-	output.innerHTML = slider.value;
-
-	slider.oninput = function () {
-		output.innerHTML = this.value;
-	}
-</script>
