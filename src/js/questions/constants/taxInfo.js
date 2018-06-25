@@ -1290,156 +1290,256 @@ const TAX_BRACKETS = {
     NM: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 5500,
+          percent: 0.017
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 11000,
+          percent: 0.032
+        },
+        {
+          maxEarnings: 16000,
+          percent: 0.047
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.049
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 8000,
+          percent: 0.017
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 16000,
+          percent: 0.032
+        },
+        {
+          maxEarnings: 24000,
+          percent: 0.047
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.049
         }]
     },
     NY: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
+          maxEarnings: 8500,
           percent: 0.04
         },
         {
+          maxEarnings: 11700,
+          percent: 0.045
+        },
+        {
+          maxEarnings: 13900,
+          percent: 0.0525
+        },
+        {
+          maxEarnings: 21400,
+          percent: 0.059
+        },
+        {
+          maxEarnings: 80650,
+          percent: 0.0633
+        },
+        {
+          maxEarnings: 215400,
+          percent: 0.0657
+        },
+        {
+          maxEarnings: 1077550,
+          percent: 0.0685
+        },
+        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0882
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
+          maxEarnings: 17150,
           percent: 0.04
         },
         {
+          maxEarnings: 23600,
+          percent: 0.045
+        },
+        {
+          maxEarnings: 27900,
+          percent: 0.0525
+        },
+        {
+          maxEarnings: 43000,
+          percent: 0.059
+        },
+        {
+          maxEarnings: 161550,
+          percent: 0.0633
+        },
+        {
+          maxEarnings: 323200,
+          percent: 0.0657
+        },
+        {
+          maxEarnings: 2155350,
+          percent: 0.0685
+        },
+        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0882
         }]
     },
     NC: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.05499
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.05499
         }]
     },
     ND: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 38700,
+          percent: 0.011
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 93700,
+          percent: 0.0204
+        },
+        {
+          maxEarnings: 195450,
+          percent: 0.0227
+        },
+        {
+          maxEarnings: 424950,
+          percent: 0.0264
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.029
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 64650,
+          percent: 0.011
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 156150,
+          percent: 0.0204
+        },
+        {
+          maxEarnings: 237950,
+          percent: 0.0227
+        },
+        {
+          maxEarnings: 424950,
+          percent: 0.0264
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.029
         }]
     },
     OH: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 10650,
+          percent: 0.0
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 16000,
+          percent: 0.0198
+        },
+        {
+          maxEarnings: 21350,
+          percent: 0.02746
+        },
+        {
+          maxEarnings: 42650,
+          percent: 0.02969
+        },
+        {
+          maxEarnings: 85300,
+          percent: 0.03465
+        },
+        {
+          maxEarnings: 106650,
+          percent: 0.0396
+        },
+        {
+          maxEarnings: 213350,
+          percent: 0.04597
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.04997
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 10650,
+          percent: 0.0
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 16000,
+          percent: 0.0198
+        },
+        {
+          maxEarnings: 21350,
+          percent: 0.02746
+        },
+        {
+          maxEarnings: 42650,
+          percent: 0.02969
+        },
+        {
+          maxEarnings: 85300,
+          percent: 0.03465
+        },
+        {
+          maxEarnings: 106650,
+          percent: 0.0396
+        },
+        {
+          maxEarnings: 213350,
+          percent: 0.04597
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.04997
         }]
     },
     OK: {
       [INDV]: [
         {
-          maxEarnings: 500,
+          maxEarnings: 1000,
+          percent: 0.005
+        },
+        {
+          maxEarnings: 2500,
+          percent: 0.01
+        },
+        {
+          maxEarnings: 3750,
           percent: 0.02
         },
         {
-          maxEarnings: 3000,
+          maxEarnings: 4900,
+          percent: 0.03
+        },
+        {
+          maxEarnings: 7200,
           percent: 0.04
         },
         {
@@ -1449,11 +1549,23 @@ const TAX_BRACKETS = {
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
+          maxEarnings: 2000,
+          percent: 0.005
+        },
+        {
+          maxEarnings: 5000,
+          percent: 0.01
+        },
+        {
+          maxEarnings: 7500,
           percent: 0.02
         },
         {
-          maxEarnings: 6000,
+          maxEarnings: 9800,
+          percent: 0.03
+        },
+        {
+          maxEarnings: 12200,
           percent: 0.04
         },
         {
@@ -1464,230 +1576,182 @@ const TAX_BRACKETS = {
     OR: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 3450,
+          percent: 0.05
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 8700,
+          percent: 0.07
+        },
+        {
+          maxEarnings: 125000,
+          percent: 0.09
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.099
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 6900,
+          percent: 0.05
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 17400,
+          percent: 0.07
+        },
+        {
+          maxEarnings: 250000,
+          percent: 0.09
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.099
         }]
     },
     PA: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0307
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0307
         }]
     },
     RI: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 62550,
+          percent: 0.0375
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 149150,
+          percent: 0.0475
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0599
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 62550,
+          percent: 0.0375
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 149150,
+          percent: 0.0475
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0599
         }]
     },
     SC: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 2970,
+          percent: 0.0
         },
         {
-          maxEarnings: 3000,
+          maxEarnings: 5940,
+          percent: 0.03
+        },
+        {
+          maxEarnings: 8910,
           percent: 0.04
         },
         {
-          maxEarnings: 999999999999,
+          maxEarnings: 11880,
           percent: 0.05
+        },
+        {
+          maxEarnings: 14860,
+          percent: 0.06
+        },
+        {
+          maxEarnings: 999999999999,
+          percent: 0.07
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 2970,
+          percent: 0.0
         },
         {
-          maxEarnings: 6000,
+          maxEarnings: 5940,
+          percent: 0.03
+        },
+        {
+          maxEarnings: 8910,
           percent: 0.04
         },
         {
-          maxEarnings: 999999999999,
+          maxEarnings: 11880,
           percent: 0.05
+        },
+        {
+          maxEarnings: 14860,
+          percent: 0.06
+        },
+        {
+          maxEarnings: 999999999999,
+          percent: 0.07
         }]
     },
     SD: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0
         }]
     },
     TN: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.03
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.03
         }]
     },
     TX: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0
         }]
     },
     UT: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
           percent: 0.05
         }
       ],
       [JOINT]: [
-        {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
         {
           maxEarnings: 999999999999,
           percent: 0.05
@@ -1696,131 +1760,155 @@ const TAX_BRACKETS = {
     VT: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 37900,
+          percent: 0.0355
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 91850,
+          percent: 0.068
+        },
+        {
+          maxEarnings: 191650,
+          percent: 0.078
+        },
+        {
+          maxEarnings: 416650,
+          percent: 0.088
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0895
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 63300,
+          percent: 0.0355
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 153100,
+          percent: 0.068
+        },
+        {
+          maxEarnings: 233300,
+          percent: 0.078
+        },
+        {
+          maxEarnings: 416650,
+          percent: 0.088
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0895
         }]
     },
     VA: {
       [INDV]: [
         {
-          maxEarnings: 500,
+          maxEarnings: 3000,
           percent: 0.02
         },
         {
-          maxEarnings: 3000,
-          percent: 0.04
+          maxEarnings: 5000,
+          percent: 0.03
+        },
+        {
+          maxEarnings: 17000,
+          percent: 0.05
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0575
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
+          maxEarnings: 3000,
           percent: 0.02
         },
         {
-          maxEarnings: 6000,
-          percent: 0.04
+          maxEarnings: 5000,
+          percent: 0.03
+        },
+        {
+          maxEarnings: 17000,
+          percent: 0.05
         },
         {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0575
         }]
     },
     WA: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 3000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
-        },
-        {
-          maxEarnings: 6000,
-          percent: 0.04
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.0
         }]
     },
     WV: {
       [INDV]: [
         {
-          maxEarnings: 500,
-          percent: 0.02
+          maxEarnings: 10000,
+          percent: 0.03
         },
         {
-          maxEarnings: 3000,
+          maxEarnings: 25000,
           percent: 0.04
         },
         {
+          maxEarnings: 40000,
+          percent: 0.045
+        },
+        {
+          maxEarnings: 60000,
+          percent: 0.06
+        },
+        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.065
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 1000,
-          percent: 0.02
+          maxEarnings: 10000,
+          percent: 0.03
         },
         {
-          maxEarnings: 6000,
+          maxEarnings: 25000,
           percent: 0.04
         },
         {
+          maxEarnings: 40000,
+          percent: 0.045
+        },
+        {
+          maxEarnings: 60000,
+          percent: 0.06
+        },
+        {
           maxEarnings: 999999999999,
-          percent: 0.05
+          percent: 0.065
         }]
     },
     WI: {
       [INDV]: [
         {
-          maxEarnings: 11090,
+          maxEarnings: 11230,
           percent: 0.04
         },
         {
-          maxEarnings: 22190,
+          maxEarnings: 22470,
           percent: 0.0584
         },
         {
-          maxEarnings: 244270,
+          maxEarnings: 247350,
           percent: 0.0627
         },
         {
@@ -1830,15 +1918,15 @@ const TAX_BRACKETS = {
       ],
       [JOINT]: [
         {
-          maxEarnings: 14790,
+          maxEarnings: 14980,
           percent: 0.04
         },
         {
-          maxEarnings: 29580,
+          maxEarnings: 29960,
           percent: 0.0584
         },
         {
-          maxEarnings: 325700,
+          maxEarnings: 329810,
           percent: 0.0627
         },
         {
@@ -1849,38 +1937,14 @@ const TAX_BRACKETS = {
     WY: {
       [INDV]: [
         {
-          maxEarnings: 11090,
-          percent: 0.04
-        },
-        {
-          maxEarnings: 22190,
-          percent: 0.0584
-        },
-        {
-          maxEarnings: 244270,
-          percent: 0.0627
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.0765
+          percent: 0.0
         }
       ],
       [JOINT]: [
         {
-          maxEarnings: 14790,
-          percent: 0.04
-        },
-        {
-          maxEarnings: 29580,
-          percent: 0.0584
-        },
-        {
-          maxEarnings: 325700,
-          percent: 0.0627
-        },
-        {
           maxEarnings: 999999999999,
-          percent: 0.0765
+          percent: 0.0
         }]
     }
   },
@@ -1946,7 +2010,208 @@ const TAX_BRACKETS = {
   }
 };
 // Not sure if we'll actually need this array yet, but I'm keeping the base here just in case
-const STATE_CODES = 'filler';
+const STATE_CODES = [
+  {
+    id: 'AL',
+    text: 'Alabama'
+  },
+  {
+    id: 'AK',
+    text: 'Alaska'
+  },
+  {
+    id: 'AZ',
+    text: 'Arizona'
+  },
+  {
+    id: 'AR',
+    text: 'Arkansas'
+  },
+  {
+    id: 'CA',
+    text: 'California'
+  },
+  {
+    id: 'CO',
+    text: 'Colorado'
+  },
+  {
+    id: 'CT',
+    text: 'Conneticut'
+  },
+  {
+    id: 'DE',
+    text: 'Delaware'
+  },
+  {
+    id: 'FL',
+    text: 'Florida'
+  },
+  {
+    id: 'GA',
+    text: 'Georgia'
+  },
+  {
+    id: 'HI',
+    text: 'Hawaii'
+  },
+  {
+    id: 'ID',
+    text: 'Idaho'
+  },
+  {
+    id: 'IL',
+    text: 'Illinois'
+  },
+  {
+    id: 'IN',
+    text: 'Indiana'
+  },
+  {
+    id: 'IA',
+    text: 'Iowa'
+  },
+  {
+    id: 'KS',
+    text: 'Kansas'
+  },
+  {
+    id: 'KY',
+    text: 'Kentucky'
+  },
+  {
+    id: 'LA',
+    text: 'Louisiana'
+  },
+  {
+    id: 'ME',
+    text: 'Maine'
+  },
+  {
+    id: 'MD',
+    text: 'Maryland'
+  },
+  {
+    id: 'MA',
+    text: 'Massachusetts'
+  },
+  {
+    id: 'MI',
+    text: 'Michigan'
+  },
+  {
+    id: 'MN',
+    text: 'Minnesota'
+  },
+  {
+    id: 'MS',
+    text: 'Mississippi'
+  },
+  {
+    id: 'MO',
+    text: 'Missouri'
+  },
+  {
+    id: 'MT',
+    text: 'Montana'
+  },
+  {
+    id: 'NE',
+    text: 'Nebraska'
+  },
+  {
+    id: 'NV',
+    text: 'Nevada'
+  },
+  {
+    id: 'NH',
+    text: 'New Hampshire'
+  },
+  {
+    id: 'NJ',
+    text: 'New Jersey'
+  },
+  {
+    id: 'NM',
+    text: 'New Mexico'
+  },
+  {
+    id: 'NY',
+    text: 'New York'
+  },
+  {
+    id: 'NC',
+    text: 'North Carolina'
+  },
+  {
+    id: 'ND',
+    text: 'North Dakota'
+  },
+  {
+    id: 'OH',
+    text: 'Ohio'
+  },
+  {
+    id: 'OK',
+    text: 'Oklahoma'
+  },
+  {
+    id: 'OR',
+    text: 'Oregon'
+  },
+  {
+    id: 'PA',
+    text: 'Pennsylvania'
+  },
+  {
+    id: 'RI',
+    text: 'Rhode Island'
+  },
+  {
+    id: 'SC',
+    text: 'South Carolina'
+  },
+  {
+    id: 'SD',
+    text: 'South Dakota'
+  },
+  {
+    id: 'TN',
+    text: 'Tennessee'
+  },
+  {
+    id: 'TX',
+    text: 'Texas'
+  },
+  {
+    id: 'UT',
+    text: 'Utah'
+  },
+  {
+    id: 'VT',
+    text: 'Vermont'
+  },
+  {
+    id: 'VA',
+    text: 'Virginia'
+  },
+  {
+    id: 'WA',
+    text: 'Washington'
+  },
+  {
+    id: 'WV',
+    text: 'West Virginia'
+  },
+  {
+    id: 'WI',
+    text: 'Wisconsin'
+  },
+  {
+    id: 'WY',
+    text: 'Wyoming'
+  }
+];
 
 export default {
   INDV,
