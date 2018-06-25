@@ -7,6 +7,9 @@ export const setInputEvents = () => {
       if (question.changeEvent) {
         $(`#${question.id}`).change(question.changeEvent);
       }
+      if (question.clickEvent) {
+        $(`#${question.id}`).click(question.clickEvent);
+      }
       return question;
     });
     return page;
