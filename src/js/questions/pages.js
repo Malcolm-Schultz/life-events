@@ -7,9 +7,6 @@ const {
   WELCOME_PAGE, INITIAL_PAGE, SURVEY_QUESTIONS_PAGE
 } = CONSTANTS.IDs.PAGE_IDS;
 const { QUESTION_IDS } = CONSTANTS.IDs;
-const {
-  QUESTION_1_DATA, QUESTION_2_DATA, QUESTION_3_DATA
-} = CONSTANTS;
 const { STATE_CODES } = CONSTANTS.TAX_INFO;
 
 const welcomePage = {
@@ -115,7 +112,7 @@ const surveyQuestionsPage = {
       required: true,
       show: true,
       label: 'How much do you spend per month on food?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_FOOD_SPENDING],
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_FOOD_SPENDING]
     },
     {
       id: 'question2',
@@ -125,7 +122,7 @@ const surveyQuestionsPage = {
       required: true,
       show: true,
       label: 'How much is your monthly rent/mortgage?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_RENT_MORTGAGE],
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_RENT_MORTGAGE]
     },
     {
       id: 'question3',
@@ -135,7 +132,7 @@ const surveyQuestionsPage = {
       required: true,
       show: true,
       label: 'Monthly recreational spending',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN],
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN]
     }
   ]
 };
