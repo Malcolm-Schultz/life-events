@@ -11,7 +11,7 @@ export const HEROES_DATA = [
   },
   {
     id: 'hero_3',
-    text: 'Net Worth At Retirement',
+    text: 'Current Monthly Spending Money',
     defaultValue: '$0'
   }
 ];
