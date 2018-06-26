@@ -21,7 +21,8 @@ export const QUESTION_IDS = {
     NETWORTH_TEXT: 'networthInput',
     CURRENT_ANNUAL_INCOME_TEXT: 'currentAnnualIncomeInput',
     RETIREMENT_AGE_TEXT: 'retirementAgeInput',
-    ANNUAL_SAVINGS_BAR: 'annualSavingsInput'
+    ANNUAL_SAVINGS_BAR: 'annualSavingsInput',
+    CURRENT_LOCATION_DROPDOWN: 'currentLocationInput'
   },
   [SURVEY_QUESTIONS_PAGE]: {
     QUESTION1_TEXT: 'question1Input',
