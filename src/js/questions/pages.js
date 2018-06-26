@@ -72,10 +72,8 @@ const initialInfoPage = {
       placeholder: 'Current Location',
       type: 'select-dropdown',
       required: true,
-      show: true,
-      label: 'Current location',
-      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN],
-      values: STATE_CODES
+      values: STATE_CODES,
+      changeEvent: changeEvents[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN]
     }/*,
     {
       id: QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT,

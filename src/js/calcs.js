@@ -30,11 +30,12 @@ const calculateFunds = () => {
   const initialFunds = state.ui.values.networthInput || 0;
   const currentAnnualIncome = state.ui.values.currentAnnualIncomeInput || 0;
   const careerId = state.ui.values.careerInput || '';
+  const stateCode = state.ui.values.currentLocationInput || 'WI';
 
   const careerData = createCareerData(careerId);
   const currentSalary = isInCareer(age, careerData.educationLevel) ? careerData.startingCareerSalary : currentAnnualIncome;
   let federalTaxBracket = getFederalTaxBracket(TAX_INFO.INDV, careerData.startingCareerSalary);
-  let stateTaxBracket = getStateTaxBracket(TAX_INFO.INDV, 'WI', careerData.startingCareerSalary);
+  let stateTaxBracket = getStateTaxBracket(TAX_INFO.INDV, stateCode, careerData.startingCareerSalary);
 
   const netIncome = calcNetIncome({ federalTaxBracket, stateTaxBracket }, currentSalary);
   let monthly = R.times(calcMonthlyData(initialFunds, currentSalary, federalTaxBracket, stateTaxBracket), MONTHS);
@@ -58,7 +59,7 @@ const calculateFunds = () => {
     const currentAnnualSalary = inCareer ? calcSalaryWithCOLA(careerData.startingCareerSalary, year) : calcSalaryWithCOLA(currentAnnualIncome, year);
 
     federalTaxBracket = getFederalTaxBracket(TAX_INFO.INDV, currentAnnualSalary);
-    stateTaxBracket = getStateTaxBracket(TAX_INFO.INDV, 'WI', currentAnnualSalary);
+    stateTaxBracket = getStateTaxBracket(TAX_INFO.INDV, stateCode, currentAnnualSalary);
     const netAnnualIncome = calcNetIncome({ federalTaxBracket, stateTaxBracket }, currentAnnualSalary);
     monthly = R.times(calcMonthlyData(lastYear.totalNetworth, currentAnnualSalary, federalTaxBracket, stateTaxBracket), MONTHS);
     return [...accum, {

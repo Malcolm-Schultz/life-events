@@ -10,7 +10,7 @@ export default {
     const parsedValue = parseInt(e.target.value, 10);
     let isValid = !Number.isNaN(parsedValue);
 
-    isValid = !!(isValid && (parsedValue >= 18 && parsedValue <= 65));
+    isValid = !!(isValid && (parsedValue >= 16 && parsedValue <= 65));
 
     if (isValid) {
       state.ui.values[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT] = parsedValue;
@@ -116,6 +116,23 @@ export default {
       state.ui.values[QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR] = Number.isNaN(parsedValue) ? 0 : parsedValue;
       showError(QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR);
     }
+  },
+  [QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN]: (e) => {
+    console.log(e);
+    const parsedValue = e;
+    state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN] = parsedValue;
+    const financialData = state.calculateFunds();
+    state.data = { ...state.data, financialData };
+    updateHeroes(financialData);
+
+  /*  const infoItems = [
+      {
+        key: 'location',
+        val: `${parsedValue}`
+      }
+    ];
+    addOrUpdateInfo(infoItems);
+  */
   }
 
   /* [QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT]: (e) => {
