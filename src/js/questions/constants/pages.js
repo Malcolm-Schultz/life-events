@@ -16,6 +16,11 @@ export const PAGE_IDS = {
 
 export const QUESTION_IDS = {
   [WELCOME_PAGE]: {},
+  [SURVEY_QUESTIONS_PAGE]: {
+    QUESTION1_TEXT: 'question1Input',
+    QUESTION2_TEXT: 'question2Input',
+    QUESTION3_TEXT: 'question3Input'
+  },
   [INITIAL_PAGE]: {
     AGE_TEXT: 'ageInput',
     NETWORTH_TEXT: 'networthInput',
@@ -23,11 +28,6 @@ export const QUESTION_IDS = {
     RETIREMENT_AGE_TEXT: 'retirementAgeInput',
     ANNUAL_SAVINGS_BAR: 'annualSavingsInput',
     CURRENT_LOCATION_DROPDOWN: 'currentLocationInput'
-  },
-  [SURVEY_QUESTIONS_PAGE]: {
-    QUESTION1_TEXT: 'question1Input',
-    QUESTION2_TEXT: 'question2Input',
-    QUESTION3_TEXT: 'question3Input'
   },
   [CAREER_PLANS_PAGE]: {
     CAREER_DROPDOWN: 'careerInput',

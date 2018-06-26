@@ -137,8 +137,8 @@ const surveyQuestionsPage = {
 
 const pages = [
   welcomePage,
-  initialInfoPage,
-  surveyQuestionsPage
+  surveyQuestionsPage,
+  initialInfoPage
 ];
 
 export { setInputEvents, selectInputClickEvent };
