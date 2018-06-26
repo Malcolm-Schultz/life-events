@@ -4,6 +4,7 @@ import pages from '../pages';
 
 const { PAGE_IDS, QUESTION_IDS } = CONSTANTS.IDs;
 const { INITIAL_PAGE } = PAGE_IDS;
+const { STATE_CODES } = CONSTANTS.TAX_INFO;
 
 export default {
   [QUESTION_IDS[INITIAL_PAGE].AGE_TEXT]: (e) => {
@@ -118,21 +119,19 @@ export default {
     }
   },
   [QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN]: (e) => {
-    console.log(e);
+    console.log(STATE_CODES);
     const parsedValue = e;
     state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN] = parsedValue;
     const financialData = state.calculateFunds();
     state.data = { ...state.data, financialData };
     updateHeroes(financialData);
-
-  /*  const infoItems = [
+    const infoItems = [
       {
-        key: 'location',
-        val: `${parsedValue}`
+        key: 'Location',
+        val: `${state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN]}`
       }
     ];
     addOrUpdateInfo(infoItems);
-  */
   }
 
   /* [QUESTION_IDS[INITIAL_PAGE].TARGET_MONTHLY_RETIREMENT_MONEY_TEXT]: (e) => {
