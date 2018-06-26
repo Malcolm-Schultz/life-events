@@ -13,7 +13,7 @@ const welcomePage = {
   id: WELCOME_PAGE,
   nav: 'Welcome',
   title: 'Welcome',
-  subtitle: 'Where do you see yourself in 30 years?',
+  subtitle: 'Where do you see yourself in 50 years?',
   subtitle2: 'The Retirement Age Financial Calculator will allow you to see how your financial decisions now will affect your retirement and future funds.',
   show: true
 };
@@ -124,7 +124,7 @@ const surveyQuestionsPage = {
     },
     {
       id: 'question3',
-      placeholder: 'Monthly recreational spending?',
+      placeholder: 'What is your monthly recreational spending?',
       info: 'question3',
       type: 'text',
       required: true,
