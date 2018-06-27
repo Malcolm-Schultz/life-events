@@ -19,7 +19,11 @@ export const updateHeroes = (financialData) => {
   // const avgYearlyIncome = netWorthAt65 / (rAge - age);
   const percentNotSaved = (100 - percentSavings) / 100;
   const monthlyNonRetirementMoney = (startingIncome * percentNotSaved) / 12;
-
+  console.log('retirementMoney', retirementMoney);
+  console.log('monthlyRetirementMoney', monthlyRetirementMoney);
+  console.log('monthlyNonRetirementMoney', monthlyNonRetirementMoney);
+  console.log('netWorth', netWorthAt65);
+  console.log('percentSavings', percentSavings);
   $('#hero_1 h1').html(`$${Math.round(retirementMoney).toLocaleString()}`);
   $('#hero_2 h1').html(`$${Math.round(monthlyRetirementMoney).toLocaleString()}`);
   $('#hero_3 h1').html(`$${Math.round(monthlyNonRetirementMoney).toLocaleString()}`);

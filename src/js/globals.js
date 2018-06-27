@@ -1,6 +1,9 @@
 
 import pages, { setInputEvents, selectInputClickEvent } from './questions/pages';
+import CONSTANTS from './questions/constants';
 
+const { PAGE_IDS, QUESTION_IDS } = CONSTANTS.IDs;
+const { INITIAL_PAGE } = PAGE_IDS;
 const state = {
   ui: {
     navigation: {
@@ -8,6 +11,7 @@ const state = {
     },
     pages,
     values: {
+      [QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR]: 15,
       info: {
 
       }
