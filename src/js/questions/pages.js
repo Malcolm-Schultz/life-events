@@ -21,7 +21,7 @@ const welcomePage = {
 const initialInfoPage = {
 
   id: INITIAL_PAGE,
-  nav: 'Get Started',
+  nav: 'Calculator',
   title: "Let's start with where you are at...",
   show: false,
   questions: [
@@ -97,7 +97,7 @@ const initialInfoPage = {
 
 const surveyQuestionsPage = {
   id: SURVEY_QUESTIONS_PAGE,
-  nav: 'Survey',
+  nav: 'Monthly Expenses',
   title: 'What are you doing with your money?',
   show: false,
   required: true,
@@ -137,8 +137,8 @@ const surveyQuestionsPage = {
 
 const pages = [
   welcomePage,
-  surveyQuestionsPage,
-  initialInfoPage
+  initialInfoPage,
+  surveyQuestionsPage
 ];
 
 export { setInputEvents, selectInputClickEvent };
