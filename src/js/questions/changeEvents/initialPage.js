@@ -1,10 +1,10 @@
+import $ from 'jquery';
 import CONSTANTS from '../constants';
 import { showError, removeError, addOrUpdateInfo, updateHeroes } from './util';
 import pages from '../pages';
 
 const { PAGE_IDS, QUESTION_IDS } = CONSTANTS.IDs;
 const { INITIAL_PAGE } = PAGE_IDS;
-const { STATE_CODES } = CONSTANTS.TAX_INFO;
 
 export default {
   [QUESTION_IDS[INITIAL_PAGE].AGE_TEXT]: (e) => {
@@ -18,7 +18,7 @@ export default {
       state.ui.values.info[pages[1].questions[0].info] = parsedValue;
       const infoItems = [
         {
-          key: pages[1].questions[0].info,
+          key: pages[2].questions[0].info,
           val: `${parsedValue} years`
         }
       ];
@@ -41,14 +41,16 @@ export default {
 
       const infoItems = [
         {
-          key: pages[1].questions[2].info,
+          key: pages[2].questions[2].info,
           val: `$${parsedValue}`
         }
       ];
       addOrUpdateInfo(infoItems);
       const financialData = state.calculateFunds();
-
+      console.log('financialData', financialData);
+      console.log('updating state');
       state.data = { ...state.data, financialData };
+      console.log('calling updateHeroes');
       updateHeroes(financialData);
     } else {
       state.ui.values[QUESTION_IDS[INITIAL_PAGE].NETWORTH_TEXT] = undefined;
@@ -108,7 +110,7 @@ export default {
       ];
 
       addOrUpdateInfo(infoItems);
-
+      $(`#${QUESTION_IDS[INITIAL_PAGE].ANNUAL_SAVINGS_BAR}-span`).html(parsedValue);
       const financialData = state.calculateFunds();
       state.data = { ...state.data, financialData };
       updateHeroes(financialData);
@@ -119,7 +121,6 @@ export default {
     }
   },
   [QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN]: (e) => {
-    console.log(STATE_CODES);
     const parsedValue = e;
     state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_LOCATION_DROPDOWN] = parsedValue;
     const financialData = state.calculateFunds();
