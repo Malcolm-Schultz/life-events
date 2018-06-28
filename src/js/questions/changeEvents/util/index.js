@@ -11,7 +11,8 @@ export const updateHeroes = (financialData) => {
   const percentSavings = state.ui.values.annualSavingsInput || 0;
   const rAge = state.ui.values[QUESTION_IDS[INITIAL_PAGE].RETIREMENT_AGE_TEXT] || 0;
   // const age = state.ui.values[QUESTION_IDS[INITIAL_PAGE].AGE_TEXT] || 0;
-  const startingIncome = state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT] || 0;
+  // const startingIncome = state.ui.values[QUESTION_IDS[INITIAL_PAGE].CURRENT_ANNUAL_INCOME_TEXT] || 0;
+  const startingIncome = (financialData[0] || {}).netIncomeAfterExpenses;
 
   const retirementMoney = (netWorthAt65 * (percentSavings / 100));
   const monthlyRetirementMoney = ((retirementMoney / 12) / (80 - rAge));
@@ -19,11 +20,11 @@ export const updateHeroes = (financialData) => {
   // const avgYearlyIncome = netWorthAt65 / (rAge - age);
   const percentNotSaved = (100 - percentSavings) / 100;
   const monthlyNonRetirementMoney = (startingIncome * percentNotSaved) / 12;
-  console.log('retirementMoney', retirementMoney);
-  console.log('monthlyRetirementMoney', monthlyRetirementMoney);
-  console.log('monthlyNonRetirementMoney', monthlyNonRetirementMoney);
-  console.log('netWorth', netWorthAt65);
-  console.log('percentSavings', percentSavings);
+  // console.log('retirementMoney', retirementMoney);
+  // console.log('monthlyRetirementMoney', monthlyRetirementMoney);
+  // console.log('monthlyNonRetirementMoney', monthlyNonRetirementMoney);
+  // console.log('netWorth', netWorthAt65);
+  // console.log('percentSavings', percentSavings);
   $('#hero_1 h1').html(`$${Math.round(retirementMoney).toLocaleString()}`);
   $('#hero_2 h1').html(`$${Math.round(monthlyRetirementMoney).toLocaleString()}`);
   $('#hero_3 h1').html(`$${Math.round(monthlyNonRetirementMoney).toLocaleString()}`);
@@ -40,7 +41,7 @@ export const updateHeroes = (financialData) => {
     document.querySelector(`#hero_${1}`).style.backgroundColor = `hsla(${hero2ColorVal - 20}, 70%, 50%, 1)`;
   }
 
-  const hero3ColorVal = Math.round((monthlyNonRetirementMoney / 4000) * 120);
+  const hero3ColorVal = Math.round((monthlyNonRetirementMoney / 2000) * 120);
 
   if (hero3ColorVal > 120) {
     document.querySelector(`#hero_${3}`).style.backgroundColor = `hsla(120, 70%, 50%, 1)`;

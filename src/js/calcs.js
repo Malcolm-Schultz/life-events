@@ -29,6 +29,12 @@ const calculateFunds = () => {
   const age = state.ui.values.ageInput || DEFAULT_AGE;
   const initialFunds = state.ui.values.networthInput || 0;
   const currentAnnualIncome = state.ui.values.currentAnnualIncomeInput || 0;
+  const yearlyFood = state.ui.values.foodInput * 12 || 0;
+  console.log(yearlyFood);
+  const yearlyHousing = state.ui.values.housingInput * 12 || 0;
+  const yearlySpending = state.ui.values.spendingInput * 12 || 0;
+  const totalYearlySpending = yearlyFood + yearlyHousing + yearlySpending;
+  console.log(totalYearlySpending);
   const careerId = state.ui.values.careerInput || '';
   const stateCode = state.ui.values.currentLocationInput || 'WI';
 
@@ -38,12 +44,15 @@ const calculateFunds = () => {
   let stateTaxBracket = getStateTaxBracket(TAX_INFO.INDV, stateCode, careerData.startingCareerSalary);
 
   const netIncome = calcNetIncome({ federalTaxBracket, stateTaxBracket }, currentSalary);
+  const netIncomeAfterExpenses = netIncome - totalYearlySpending;
+  console.log(netIncomeAfterExpenses);
   let monthly = R.times(calcMonthlyData(initialFunds, currentSalary, federalTaxBracket, stateTaxBracket), MONTHS);
   let money = [
     {
       age,
       currentAnnualSalary: currentSalary,
       netAnnualIncome: netIncome,
+      netIncomeAfterExpenses,
       monthly,
       totalNetworth: initialFunds + netIncome
     }];
@@ -67,7 +76,8 @@ const calculateFunds = () => {
       currentAnnualSalary,
       netAnnualIncome,
       monthly,
-      totalNetworth: lastYear.totalNetworth + netAnnualIncome
+      totalNetworth: lastYear.totalNetworth + netAnnualIncome,
+      netIncomeAfterExpenses
     }];
   }, money)(workingYears);
 

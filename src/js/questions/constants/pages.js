@@ -17,9 +17,9 @@ export const PAGE_IDS = {
 export const QUESTION_IDS = {
   [WELCOME_PAGE]: {},
   [SURVEY_QUESTIONS_PAGE]: {
-    QUESTION1_TEXT: 'question1Input',
-    QUESTION2_TEXT: 'question2Input',
-    QUESTION3_TEXT: 'question3Input'
+    QUESTION1_TEXT: 'foodInput',
+    QUESTION2_TEXT: 'housingInput',
+    QUESTION3_TEXT: 'spendingInput'
   },
   [INITIAL_PAGE]: {
     AGE_TEXT: 'ageInput',
