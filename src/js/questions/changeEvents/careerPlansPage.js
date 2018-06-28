@@ -1,68 +1,55 @@
-
-import R from 'ramda';
-import $ from 'jquery';
+// import R from 'ramda';
+// import $ from 'jquery';
 import CONSTANTS from '../constants';
 import pages from '../pages';
-import { addOrUpdateInfo } from './util';
+import { addOrUpdateInfo, updateHeroes } from './util';
 
-const { OCCUPATIONAL_DATA, EDUCATION_LEVELS } = CONSTANTS;
-const { CAREER_PLANS_PAGE } = CONSTANTS.IDs.PAGE_IDS;
+// const { OCCUPATIONAL_DATA, EDUCATION_LEVELS } = CONSTANTS;
+const { SURVEY_QUESTIONS_PAGE } = CONSTANTS.IDs.PAGE_IDS;
 const { QUESTION_IDS } = CONSTANTS.IDs;
 
 export default {
-  [QUESTION_IDS[CAREER_PLANS_PAGE].CAREER_DROPDOWN]: (careerId) => {
-    state.ui.values[QUESTION_IDS[CAREER_PLANS_PAGE].CAREER_DROPDOWN] = careerId;
-    state.ui.values.info[pages[2].questions[0].info] = careerId;
-
-    const index = CONSTANTS.OCCUPATIONAL_DATA.findIndex(element => element.id === careerId);
-
-    const STARTING_SALARY_KEY = 'Starting Salary';
-    const STARTING_SALARY_VAL = CONSTANTS.OCCUPATIONAL_DATA[index].salary;
-
+  [QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION1_TEXT]: (e) => {
+    console.log('e.target.id', e.target.value);
+    state.ui.values[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION1_TEXT] = e.target.value;
+    state.ui.values.info[pages[1].questions[0].info] = e.target.value;
     const infoItems = [
       {
-        key: pages[2].questions[0].info,
-        val: CONSTANTS.OCCUPATIONAL_DATA[index].text
-      },
-      {
-        key: STARTING_SALARY_KEY,
-        val: STARTING_SALARY_VAL
+        key: pages[1].questions[0].info,
+        val: `$${e.target.value}`
       }
     ];
-    addOrUpdateInfo(infoItems);
-
     const financialData = state.calculateFunds();
 
-    const careerData = R.filter(career => career.id === careerId, OCCUPATIONAL_DATA)[0];
-
-    const additionalSchoolingRequired = [
-      EDUCATION_LEVELS.SOME_COL_NO_DEG,
-      EDUCATION_LEVELS.ASSC_DEG,
-      EDUCATION_LEVELS.BACH_DEG,
-      EDUCATION_LEVELS.POST_SEC_NON_DEG,
-      EDUCATION_LEVELS.MAST_DEG,
-      EDUCATION_LEVELS.DOC_OR_PROF_DEG
-    ];
-
-    if (R.contains(careerData.education, additionalSchoolingRequired)) {
-      $(`#${QUESTION_IDS[CAREER_PLANS_PAGE].EDUCATION_PUBLIC_PRIVATE_RADIO}`).css('display', 'block');
-    } else {
-      $(`#${QUESTION_IDS[CAREER_PLANS_PAGE].EDUCATION_PUBLIC_PRIVATE_RADIO}`).css('display', 'none');
-    }
-
-    state.data = { ...state.data, financialData };
+    updateHeroes(financialData);
+    addOrUpdateInfo(infoItems);
   },
-
-  [QUESTION_IDS[CAREER_PLANS_PAGE].EDUCATION_PUBLIC_PRIVATE_RADIO]: (e) => {
-    state.ui.values[QUESTION_IDS[CAREER_PLANS_PAGE].EDUCATION_PUBLIC_PRIVATE_RADIO] = e.target.id;
-    state.ui.values.info[pages[2].questions[1].info] = e.target.id;
+  [QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION2_TEXT]: (e) => {
+    state.ui.values[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION2_TEXT] = e.target.value;
+    state.ui.values.info[pages[1].questions[1].info] = e.target.value;
     const infoItems = [
       {
-        key: pages[2].questions[1].info,
-        val: e.target.id
+        key: pages[1].questions[1].info,
+        val: `$${e.target.value}`
       }
     ];
+    const financialData = state.calculateFunds();
 
+    updateHeroes(financialData);
+    addOrUpdateInfo(infoItems);
+  },
+  [QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION3_TEXT]: (e) => {
+    state.ui.values[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION3_TEXT] = e.target.value;
+    state.ui.values.info[pages[1].questions[2].info] = e.target.value;
+    const infoItems = [
+      {
+        key: pages[1].questions[2].info,
+        val: `$${e.target.value}`
+      }
+    ];
+    const financialData = state.calculateFunds();
+
+    updateHeroes(financialData);
     addOrUpdateInfo(infoItems);
   }
 };

@@ -103,34 +103,34 @@ const surveyQuestionsPage = {
   required: true,
   questions: [
     {
-      id: 'question1',
+      id: QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION1_TEXT,
       placeholder: 'How much do you spend per month on food?',
-      info: 'question1',
+      info: 'Food',
       type: 'text',
       required: true,
       show: true,
       label: 'How much do you spend per month on food?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_FOOD_SPENDING]
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION1_TEXT]
     },
     {
-      id: 'question2',
+      id: QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION2_TEXT,
       placeholder: 'How much is your monthly rent/mortgage?',
-      info: 'question2',
+      info: 'Housing',
       type: 'text',
       required: true,
       show: true,
       label: 'How much is your monthly rent/mortgage?',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].MONTHLY_RENT_MORTGAGE]
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION2_TEXT]
     },
     {
-      id: 'question3',
+      id: QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION3_TEXT,
       placeholder: 'What is your monthly recreational spending?',
-      info: 'question3',
+      info: 'Spending',
       type: 'text',
       required: true,
       show: true,
       label: 'Monthly recreational spending',
-      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].CAN_I_AFFORD_TO_LOSE_MONEY_DROPDOWN]
+      changeEvent: changeEvents[QUESTION_IDS[SURVEY_QUESTIONS_PAGE].QUESTION3_TEXT]
     }
   ]
 };
